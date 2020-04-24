@@ -1,0 +1,8 @@
+Displayed MM/YYYY: 
+
+During 01/2020 there was a revenue of $800
+
+During 03/2020 there was a revenue of $900
+
+During 04/2020 there was a revenue of $1400
+

@@ -1,0 +1,9 @@
+Listing ID: 4
+Renter: Anna Calhoun
+Renter Email: annac@email.com
+Rent Date: 03/20/2020
+Rent Amount: 900
+Checkout Date: null
+Owner Email: emily@email.com
+
+annac@email.com has had 1 rental(s)

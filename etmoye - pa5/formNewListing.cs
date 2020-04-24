@@ -7,43 +7,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace etmoye___pa5
 {
     public partial class formNewListing : Form
     {
-        private Listing currentListing;
-
-        public formNewListing()
+        private Listing viewListing;
+        //Listing[] printListing;
+        ListingUtilities listingUtils;
+        public formNewListing(Object tempListing)
         {
-           // currentListing = (Listing)tempListing;
+            viewListing = (Listing)tempListing;
             InitializeComponent();
-        }
-
-        private void txtboxListingID_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-           
-            currentListing.listingID = txtboxListingID.Text; //object reference not set to an instance of the object 
-            currentListing.address = txtboxAddress.Text;
-            currentListing.listingEndDate = txtboxEndDate.Text;
-            currentListing.rentalAmount = txtboxRentAmount.Text;
-            currentListing.ownerEmail = txtboxOwnerEmail.Text;
+            Listing[] viewListings = new Listing[100];
 
-            //ListingUtilities.SaveListing(viewListings);
+            viewListing.listingID = txtboxListingID.Text;
+            viewListing.address = txtboxAddress.Text;
+            viewListing.listingEndDate = txtboxEndDate.Text;
+            viewListing.rentalAmount = txtboxRentAmount.Text;
+            viewListing.ownerEmail = txtboxOwnerEmail.Text;
+
+       
+            StreamWriter outfile = new StreamWriter("listings.txt", true); //("output.txt", true) use if you want to append
+            outfile.WriteLine(viewListing.listingID + "#" + viewListing.address + "#" + viewListing.listingEndDate + "#" + viewListing.rentalAmount + "#"+ viewListing.ownerEmail); // " should show student");
+
+            outfile.Close();
 
 
-            DialogResult dialogResult = MessageBox.Show("Content saved - not actually saved ", "Save", MessageBoxButtons.OK);
+            // ListingUtilities.SaveListing();
+            DialogResult dialogResult = MessageBox.Show("Report saved", "Save", MessageBoxButtons.OK);
+
             this.Close();
+
+            formListings showListings = new formListings();
+            if (showListings.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                //LoadList();
+            }
         }
 
-        private void formNewListing_Load(object sender, EventArgs e)
+        
+
+        private void newListing_Load(object sender, EventArgs e)
         {
-
+            //Guid newListingGuid = Guid.NewGuid();
+            //txtboxListingID.Text = newListingGuid.ToString();
+            int newListing = Listing.GetCount() + 1;
+            string countListings = newListing.ToString();
+            txtboxListingID.Text = countListings;
         }
+
+        
     }
 }

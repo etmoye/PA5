@@ -12,10 +12,17 @@ namespace etmoye___pa5
 {
     public partial class formMain : Form
     {
-
+        Listing currentListing = new Listing();
+        string newListing;
 
         public formMain()
         {
+            InitializeComponent();
+        }
+
+        public formMain(string newListing)
+        {
+            this.newListing = newListing;
             InitializeComponent();
         }
 
@@ -24,21 +31,7 @@ namespace etmoye___pa5
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-        private void btnNewListing_Click(object sender, EventArgs e)
-        {
-
-            formNewListing showListings = new formNewListing();
-            if (showListings.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-            else
-            {
-                //LoadList();
-            }
-
-        }
-
+ 
         private void btnListings_Click(object sender, EventArgs e)
         {
             formListings showListings = new formListings();
@@ -60,10 +53,7 @@ namespace etmoye___pa5
             {
 
             }
-            else 
-            { 
-                //LoadList();
-            }
+         
 
         }
 
@@ -74,10 +64,7 @@ namespace etmoye___pa5
             {
 
             }
-            else
-            {
-                //LoadList();
-            }
+            
         }
 
         private void btnListings_Click_1(object sender, EventArgs e)
@@ -88,10 +75,7 @@ namespace etmoye___pa5
             {
 
             }
-            else
-            {
-                //LoadList();
-            }
+          
         }
 
         private void labelTitle_Click(object sender, EventArgs e)
@@ -100,6 +84,11 @@ namespace etmoye___pa5
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void formMain_Load(object sender, EventArgs e)
         {
 
         }

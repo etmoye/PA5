@@ -51,7 +51,7 @@
             // 
             this.txtboxOwnerEmail.Location = new System.Drawing.Point(551, 412);
             this.txtboxOwnerEmail.Name = "txtboxOwnerEmail";
-            this.txtboxOwnerEmail.Size = new System.Drawing.Size(644, 35);
+            this.txtboxOwnerEmail.Size = new System.Drawing.Size(444, 35);
             this.txtboxOwnerEmail.TabIndex = 23;
             // 
             // labelOwnerEmail
@@ -67,7 +67,7 @@
             // 
             this.txtboxCheckout.Location = new System.Drawing.Point(551, 353);
             this.txtboxCheckout.Name = "txtboxCheckout";
-            this.txtboxCheckout.Size = new System.Drawing.Size(644, 35);
+            this.txtboxCheckout.Size = new System.Drawing.Size(444, 35);
             this.txtboxCheckout.TabIndex = 21;
             // 
             // labelCheckout
@@ -83,7 +83,7 @@
             // 
             this.txtboxRentAmount.Location = new System.Drawing.Point(551, 294);
             this.txtboxRentAmount.Name = "txtboxRentAmount";
-            this.txtboxRentAmount.Size = new System.Drawing.Size(644, 35);
+            this.txtboxRentAmount.Size = new System.Drawing.Size(444, 35);
             this.txtboxRentAmount.TabIndex = 19;
             // 
             // labelRentAmount
@@ -99,7 +99,7 @@
             // 
             this.txtboxRenterEmail.Location = new System.Drawing.Point(551, 176);
             this.txtboxRenterEmail.Name = "txtboxRenterEmail";
-            this.txtboxRenterEmail.Size = new System.Drawing.Size(644, 35);
+            this.txtboxRenterEmail.Size = new System.Drawing.Size(444, 35);
             this.txtboxRenterEmail.TabIndex = 17;
             // 
             // labelRenterEmail
@@ -115,7 +115,7 @@
             // 
             this.txtboxRenterName.Location = new System.Drawing.Point(551, 117);
             this.txtboxRenterName.Name = "txtboxRenterName";
-            this.txtboxRenterName.Size = new System.Drawing.Size(644, 35);
+            this.txtboxRenterName.Size = new System.Drawing.Size(444, 35);
             this.txtboxRenterName.TabIndex = 15;
             // 
             // labelRenterName
@@ -141,7 +141,7 @@
             // 
             this.txtboxListingID.Location = new System.Drawing.Point(551, 58);
             this.txtboxListingID.Name = "txtboxListingID";
-            this.txtboxListingID.Size = new System.Drawing.Size(268, 35);
+            this.txtboxListingID.Size = new System.Drawing.Size(444, 35);
             this.txtboxListingID.TabIndex = 12;
             this.txtboxListingID.TextChanged += new System.EventHandler(this.txtboxListingID_TextChanged);
             // 
@@ -149,7 +149,7 @@
             // 
             this.txboxRentDate.Location = new System.Drawing.Point(551, 235);
             this.txboxRentDate.Name = "txboxRentDate";
-            this.txboxRentDate.Size = new System.Drawing.Size(644, 35);
+            this.txboxRentDate.Size = new System.Drawing.Size(444, 35);
             this.txboxRentDate.TabIndex = 24;
             // 
             // labelRentDate
@@ -163,7 +163,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(1025, 478);
+            this.btnClose.Location = new System.Drawing.Point(825, 468);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(170, 66);
             this.btnClose.TabIndex = 26;
@@ -173,7 +173,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(825, 478);
+            this.button1.Location = new System.Drawing.Point(625, 468);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 66);
             this.button1.TabIndex = 27;
@@ -195,7 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1261, 592);
+            this.ClientSize = new System.Drawing.Size(1070, 637);
             this.Controls.Add(this.listboxTransaction);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);

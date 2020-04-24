@@ -13,7 +13,7 @@ namespace etmoye___pa5
         public string address;
         public string listingEndDate;
         public string rentalAmount;
-        public string checkoutDate;
+        //public string checkoutDate;
         public string ownerEmail;
 
         public static int count;
@@ -24,7 +24,7 @@ namespace etmoye___pa5
             this.address = address;
             this.listingEndDate = listingEndDate;
             this.rentalAmount = rentalAmount;
-            this.checkoutDate = checkoutDate;
+            //this.checkoutDate = checkoutDate;
             this.ownerEmail = ownerEmail;
         }
 
@@ -85,15 +85,6 @@ namespace etmoye___pa5
             this.rentalAmount = rentalAmount;
         }
 
-        public string GetCheckoutDate()
-        {
-            return checkoutDate;
-        }
-
-        public void SetCheckoutDate(string checkoutDate)
-        {
-            this.checkoutDate = checkoutDate;
-        }
 
         public string GetOwnerEmail()
         {
@@ -105,17 +96,15 @@ namespace etmoye___pa5
             this.ownerEmail = ownerEmail;
         }
 
-       
-
 
         public override string ToString()
         {
-            return this.listingID;
+            return this.address;
         }
-        
+
         public string ToFile()
         {
-            return listingID + '#' + address + '#' + listingEndDate + '#' + rentalAmount + '#' + ownerEmail;
+            return listingID + '#' + address + '#' + listingEndDate + '#' + rentalAmount +  '#' + ownerEmail;
         }
 
         public static int GetCount()
@@ -132,11 +121,6 @@ namespace etmoye___pa5
         {
             Listing.count++;
         }
-
-        //public Boolean Equals(Listing compare)
-        //{ 
-        //    if(compare.)
-        //}
 
         public static explicit operator Listing(int v)
         {

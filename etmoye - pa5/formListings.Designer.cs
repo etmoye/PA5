@@ -36,20 +36,18 @@
             this.txtboxEndDate = new System.Windows.Forms.TextBox();
             this.labelRentAmount = new System.Windows.Forms.Label();
             this.txtboxRentAmount = new System.Windows.Forms.TextBox();
-            this.labelCheckout = new System.Windows.Forms.Label();
-            this.txtboxCheckout = new System.Windows.Forms.TextBox();
             this.labelOwnerEmail = new System.Windows.Forms.Label();
             this.txtboxOwnerEmail = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRent = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.listboxListings = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txtboxListingID
             // 
-            this.txtboxListingID.Location = new System.Drawing.Point(564, 82);
+            this.txtboxListingID.Location = new System.Drawing.Point(560, 82);
             this.txtboxListingID.Name = "txtboxListingID";
             this.txtboxListingID.Size = new System.Drawing.Size(235, 35);
             this.txtboxListingID.TabIndex = 0;
@@ -68,7 +66,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(456, 141);
+            this.labelAddress.Location = new System.Drawing.Point(456, 156);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(100, 27);
             this.labelAddress.TabIndex = 2;
@@ -76,31 +74,33 @@
             // 
             // txtboxAddress
             // 
-            this.txtboxAddress.Location = new System.Drawing.Point(564, 140);
+            this.txtboxAddress.Location = new System.Drawing.Point(560, 153);
             this.txtboxAddress.Name = "txtboxAddress";
-            this.txtboxAddress.Size = new System.Drawing.Size(564, 35);
+            this.txtboxAddress.Size = new System.Drawing.Size(430, 35);
             this.txtboxAddress.TabIndex = 3;
             // 
             // labelEndDate
             // 
             this.labelEndDate.AutoSize = true;
-            this.labelEndDate.Location = new System.Drawing.Point(444, 198);
+            this.labelEndDate.Location = new System.Drawing.Point(420, 236);
             this.labelEndDate.Name = "labelEndDate";
             this.labelEndDate.Size = new System.Drawing.Size(113, 27);
             this.labelEndDate.TabIndex = 4;
             this.labelEndDate.Text = "End Date";
+            this.labelEndDate.Click += new System.EventHandler(this.labelEndDate_Click);
             // 
             // txtboxEndDate
             // 
-            this.txtboxEndDate.Location = new System.Drawing.Point(564, 197);
+            this.txtboxEndDate.Location = new System.Drawing.Point(560, 236);
             this.txtboxEndDate.Name = "txtboxEndDate";
-            this.txtboxEndDate.Size = new System.Drawing.Size(564, 35);
+            this.txtboxEndDate.Size = new System.Drawing.Size(430, 35);
             this.txtboxEndDate.TabIndex = 5;
+            this.txtboxEndDate.TextChanged += new System.EventHandler(this.txtboxEndDate_TextChanged);
             // 
             // labelRentAmount
             // 
             this.labelRentAmount.AutoSize = true;
-            this.labelRentAmount.Location = new System.Drawing.Point(385, 254);
+            this.labelRentAmount.Location = new System.Drawing.Point(385, 304);
             this.labelRentAmount.Name = "labelRentAmount";
             this.labelRentAmount.Size = new System.Drawing.Size(171, 27);
             this.labelRentAmount.TabIndex = 6;
@@ -108,31 +108,15 @@
             // 
             // txtboxRentAmount
             // 
-            this.txtboxRentAmount.Location = new System.Drawing.Point(564, 254);
+            this.txtboxRentAmount.Location = new System.Drawing.Point(560, 304);
             this.txtboxRentAmount.Name = "txtboxRentAmount";
-            this.txtboxRentAmount.Size = new System.Drawing.Size(564, 35);
+            this.txtboxRentAmount.Size = new System.Drawing.Size(430, 35);
             this.txtboxRentAmount.TabIndex = 7;
-            // 
-            // labelCheckout
-            // 
-            this.labelCheckout.AutoSize = true;
-            this.labelCheckout.Location = new System.Drawing.Point(385, 311);
-            this.labelCheckout.Name = "labelCheckout";
-            this.labelCheckout.Size = new System.Drawing.Size(171, 27);
-            this.labelCheckout.TabIndex = 8;
-            this.labelCheckout.Text = "Checkout Date";
-            // 
-            // txtboxCheckout
-            // 
-            this.txtboxCheckout.Location = new System.Drawing.Point(564, 312);
-            this.txtboxCheckout.Name = "txtboxCheckout";
-            this.txtboxCheckout.Size = new System.Drawing.Size(564, 35);
-            this.txtboxCheckout.TabIndex = 9;
             // 
             // labelOwnerEmail
             // 
             this.labelOwnerEmail.AutoSize = true;
-            this.labelOwnerEmail.Location = new System.Drawing.Point(407, 367);
+            this.labelOwnerEmail.Location = new System.Drawing.Point(405, 369);
             this.labelOwnerEmail.Name = "labelOwnerEmail";
             this.labelOwnerEmail.Size = new System.Drawing.Size(150, 27);
             this.labelOwnerEmail.TabIndex = 10;
@@ -140,16 +124,16 @@
             // 
             // txtboxOwnerEmail
             // 
-            this.txtboxOwnerEmail.Location = new System.Drawing.Point(564, 369);
+            this.txtboxOwnerEmail.Location = new System.Drawing.Point(560, 366);
             this.txtboxOwnerEmail.Name = "txtboxOwnerEmail";
-            this.txtboxOwnerEmail.Size = new System.Drawing.Size(564, 35);
+            this.txtboxOwnerEmail.Size = new System.Drawing.Size(430, 35);
             this.txtboxOwnerEmail.TabIndex = 11;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(412, 448);
+            this.btnEdit.Location = new System.Drawing.Point(560, 433);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(170, 66);
+            this.btnEdit.Size = new System.Drawing.Size(136, 66);
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -157,29 +141,29 @@
             // 
             // btnRent
             // 
-            this.btnRent.Location = new System.Drawing.Point(598, 448);
+            this.btnRent.Location = new System.Drawing.Point(708, 433);
             this.btnRent.Name = "btnRent";
-            this.btnRent.Size = new System.Drawing.Size(170, 66);
+            this.btnRent.Size = new System.Drawing.Size(136, 66);
             this.btnRent.TabIndex = 13;
             this.btnRent.Text = "Rent";
             this.btnRent.UseVisualStyleBackColor = true;
             this.btnRent.Click += new System.EventHandler(this.btnRent_Click);
             // 
-            // btnClose
+            // btnNew
             // 
-            this.btnClose.Location = new System.Drawing.Point(971, 448);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(170, 66);
-            this.btnClose.TabIndex = 14;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnNew.Location = new System.Drawing.Point(412, 433);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(136, 66);
+            this.btnNew.TabIndex = 14;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(784, 448);
+            this.btnDelete.Location = new System.Drawing.Point(856, 433);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(170, 66);
+            this.btnDelete.Size = new System.Drawing.Size(136, 66);
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -199,16 +183,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 620);
+            this.ClientSize = new System.Drawing.Size(1146, 672);
             this.Controls.Add(this.listboxListings);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnRent);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtboxOwnerEmail);
             this.Controls.Add(this.labelOwnerEmail);
-            this.Controls.Add(this.txtboxCheckout);
-            this.Controls.Add(this.labelCheckout);
             this.Controls.Add(this.txtboxRentAmount);
             this.Controls.Add(this.labelRentAmount);
             this.Controls.Add(this.txtboxEndDate);
@@ -224,6 +206,7 @@
             this.MinimizeBox = false;
             this.Name = "formListings";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listings";
             this.Load += new System.EventHandler(this.formListings_Load);
             this.ResumeLayout(false);
@@ -241,13 +224,11 @@
         private System.Windows.Forms.TextBox txtboxEndDate;
         private System.Windows.Forms.Label labelRentAmount;
         private System.Windows.Forms.TextBox txtboxRentAmount;
-        private System.Windows.Forms.Label labelCheckout;
-        private System.Windows.Forms.TextBox txtboxCheckout;
         private System.Windows.Forms.Label labelOwnerEmail;
         private System.Windows.Forms.TextBox txtboxOwnerEmail;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRent;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ListBox listboxListings;
     }

@@ -64,12 +64,6 @@
     <Compile Include="formListings.Designer.cs">
       <DependentUpon>formListings.cs</DependentUpon>
     </Compile>
-    <Compile Include="formNewListing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formNewListing.Designer.cs">
-      <DependentUpon>formNewListing.cs</DependentUpon>
-    </Compile>
     <Compile Include="formReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,10 +78,16 @@
     </Compile>
     <Compile Include="Listing.cs" />
     <Compile Include="ListingUtilities.cs" />
+    <Compile Include="formNewListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNewListing.Designer.cs">
+      <DependentUpon>formNewListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs" />
     <Compile Include="Transaction.cs" />
+    <Compile Include="TransactionReports.cs" />
     <Compile Include="TransactionUtilities.cs" />
     <EmbeddedResource Include="formEditListing.resx">
       <DependentUpon>formEditListing.cs</DependentUpon>
@@ -98,14 +98,14 @@
     <EmbeddedResource Include="formListings.resx">
       <DependentUpon>formListings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formNewListing.resx">
-      <DependentUpon>formNewListing.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formReport.resx">
       <DependentUpon>formReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formTransaction.resx">
       <DependentUpon>formTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNewListing.resx">
+      <DependentUpon>formNewListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -16,24 +16,83 @@ namespace etmoye___pa5
     {
         Listing[] viewListing;
         ListingUtilities listingUtils; //declare as part of the class 
+        private Transaction[] viewTransaction;
 
         public formListings()
         {
             InitializeComponent();
+            viewListing = new Listing[500];
             listingUtils = new ListingUtilities(viewListing);
+            viewTransaction = new Transaction[100];
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Listing viewListing = (Listing)listboxListings.SelectedItem;
+            string delete = txtboxListingID.Text;
+            int deleteID = listingUtils.SearchByID(delete);
+            listingUtils.DeleteListing(deleteID);
+            formEditListing editListings = new formEditListing(viewListing);
+            if (editListings.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                //listingUtils.SaveListing();
+                LoadList();
+            }
+
+            
+            //string delete = txtboxListingID.Text;
+            //int deleteID = listingUtils.SearchByID(delete);
+            //listingUtils.DeleteListing(deleteID);
         }
 
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Listing viewListing = new Listing();
+            formNewListing newListing = new formNewListing(viewListing);
+            if (newListing.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                //listingUtils.SaveListing();
+                //LoadList();
+            }
+        }
         private void btnRent_Click(object sender, EventArgs e)
         {
+
+            Listing viewListing = (Listing)listboxListings.SelectedItem;
             
-            formTransaction  currentTransaction = new formTransaction();
+            txtboxListingID.Text = viewListing.listingID;
+            txtboxRentAmount.Text = viewListing.rentalAmount;
+            txtboxOwnerEmail.Text = viewListing.ownerEmail;
+
+            Transaction viewTransaction = new Transaction();
+            int remove = int.Parse(viewListing.listingID);
+            listingUtils.DeleteListing(remove);
+
+            //Transaction viewTransaction = (Transaction)listboxListings.SelectedItem;
+            //Transaction viewTransaction = (Transaction)listboxListings.SelectedItem;
+            formTransaction  currentTransaction = new formTransaction(viewTransaction, viewListing.listingID, viewListing.rentalAmount, viewListing.ownerEmail);
             if (currentTransaction.ShowDialog() == DialogResult.OK)
             {
 
             }
             else
             {
-               LoadList();
+              // LoadList();
+            }
+
+            formListings updateListing = new formListings();
+            if (updateListing.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
 
@@ -42,17 +101,13 @@ namespace etmoye___pa5
             listingUtils.GetAllListing();
             listboxListings.DataSource = viewListing;
 
+            
+
         }
 
         private void listboxListings_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //List<Listing> listingsList = ProcessFiles.GetAllListing();
-            //ProcessFiles.GetAllListing();
-            //Listing currentListing = (Listing)listboxListings.SelectedItem;
-
-            //ProcessFiles.GetAllListing() = (Listing)listboxListings.SelectedItem;
-            //List<Listing> listingsList = ProcessFiles.GetAllListing();
-            //LoadList();
+            
             Listing viewListing = (Listing)listboxListings.SelectedItem;
 
             txtboxListingID.Text = viewListing.listingID;
@@ -60,8 +115,7 @@ namespace etmoye___pa5
             txtboxEndDate.Text = viewListing.listingEndDate;
             txtboxRentAmount.Text = viewListing.rentalAmount;
             txtboxOwnerEmail.Text = viewListing.ownerEmail;
-            //LoadList();
-            //once i close this and reopen it the text does not come back
+          
         }
 
         private void txtboxListingID_TextChanged(object sender, EventArgs e)
@@ -69,46 +123,59 @@ namespace etmoye___pa5
 
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            Listing viewListing = (Listing)listboxListings.SelectedItem;
-            formEditListing editListings = new formEditListing(viewListing);
-            if (editListings.ShowDialog() == DialogResult.OK)
-            {
-                
-            }
-            else
-            {
-                listingUtils.SaveListing();
-                LoadList();
-            }
-        }
+        
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            Listing viewListing = (Listing)listboxListings.SelectedItem;
+            string searchVal = viewListing.listingID;
+
+            int deleteID = listingUtils.SearchByID(searchVal);
+            listingUtils.DeleteListing(deleteID);
+            listingUtils.GetAllListing();
             DialogResult dialogResult = MessageBox.Show("Are you sure you would like to delete this listing?", "Delete", MessageBoxButtons.YesNo);
             if(dialogResult == DialogResult.Yes)
             {
-                //call class that has delete method
-                //reload the list of listings
+                this.Close();
             }
             else
             {
                 LoadList();
             }
-           
+
+            formListings showListings = new formListings();
+            if (showListings.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                //LoadList();
+            }
         }
 
         private void formListings_Load(object sender, EventArgs e)
         {
+
             LoadList();
 
         }
+
+        private void txtboxEndDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelEndDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }

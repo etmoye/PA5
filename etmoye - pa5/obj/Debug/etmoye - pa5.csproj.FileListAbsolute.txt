@@ -12,3 +12,17 @@ C:\Users\Emily Moye\source\repos\etmoye - pa5\etmoye - pa5\obj\Debug\etmoye - pa
 C:\Users\Emily Moye\source\repos\etmoye - pa5\etmoye - pa5\obj\Debug\etmoye - pa5.pdb
 C:\Users\Emily Moye\source\repos\etmoye - pa5\etmoye - pa5\obj\Debug\etmoye___pa5.formNewListing.resources
 C:\Users\Emily Moye\source\repos\etmoye - pa5\etmoye - pa5\obj\Debug\etmoye___pa5.formEditListing.resources
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\bin\Debug\etmoye - pa5.exe.config
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\bin\Debug\etmoye - pa5.exe
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\bin\Debug\etmoye - pa5.pdb
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye - pa5.csprojAssemblyReference.cache
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye___pa5.formEditListing.resources
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye___pa5.formMain.resources
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye___pa5.formListings.resources
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye___pa5.formReport.resources
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye___pa5.formTransaction.resources
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye___pa5.Properties.Resources.resources
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye - pa5.csproj.GenerateResource.cache
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye - pa5.exe
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye - pa5.pdb
+C:\Users\Emily Moye\source\repos\Recovery\PA5\etmoye - pa5\obj\Debug\etmoye___pa5.formNewListing.resources

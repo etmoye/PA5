@@ -7,26 +7,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace etmoye___pa5
 {
     public partial class formTransaction : Form
     {
-        Transaction[] viewTransaction;
+        private Transaction viewTransaction;
+        //Listing[] viewListing;
 
+        string listingID;
+        string rentAmount;
+        string ownerEmail;
         public formTransaction()
         {
+           
+            InitializeComponent();
+          
+        }
+
+        public formTransaction(Object tempTransaction, string listingID, string rentAmount, string ownerEmail)
+        {
+            this.listingID = listingID;
+            this.rentAmount = rentAmount;
+            this.ownerEmail = ownerEmail;
+            //viewTransaction = new Transaction[500];
+            viewTransaction = (Transaction)tempTransaction;
             InitializeComponent();
         }
 
+
+
         private void formTransaction_Load(object sender, EventArgs e)
         {
+            txtboxListingID.Text = listingID;
+            txtboxRentAmount.Text = rentAmount;
+            txtboxOwnerEmail.Text = ownerEmail;
             LoadList();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Content saved - not actually saved yet", "Save", MessageBoxButtons.OK);
+
+            Transaction[] viewTransactions = new Transaction[100];
+
+            viewTransaction.listingID = txtboxListingID.Text;
+            viewTransaction.renterName = txtboxRenterName.Text;
+            viewTransaction.renterEmail = txtboxRenterEmail.Text;
+            viewTransaction.rentDate = txboxRentDate.Text;
+            viewTransaction.rentAmount = txtboxRentAmount.Text;
+            viewTransaction.checkoutDate = txtboxCheckout.Text;
+            viewTransaction.ownerEmail = txtboxOwnerEmail.Text;
+
+            StreamWriter outfile = new StreamWriter("transactions.txt", true); //("output.txt", true) use if you want to append
+            outfile.WriteLine(viewTransaction.listingID + "#" + viewTransaction.renterName + "#" + viewTransaction.renterEmail + "#" + viewTransaction.rentDate + "#" + viewTransaction.rentAmount + "#" + viewTransaction.checkoutDate + "#" + viewTransaction.ownerEmail); // " should show student");
+
+            outfile.Close();
+            DialogResult dialogResult = MessageBox.Show("Content saved", "Save", MessageBoxButtons.OK);
             this.Close();
         }
 
@@ -55,8 +92,9 @@ namespace etmoye___pa5
 
         public void LoadList()
         {
-            viewTransaction = TransactionUtilities.GetAllTransactions();
-            listboxTransaction.DataSource = viewTransaction;
+            Transaction[] tempArray = TransactionUtilities.GetAllTransactions(); 
+           // viewTransaction = TransactionUtilities.GetAllTransactions();
+            listboxTransaction.DataSource = tempArray;
 
         }
     }

@@ -1,0 +1,4 @@
+4#Anna Calhoun#annac@email.com#03/20/2020#900#null#emily@email.com
+6#Anna Ruth#ar@email.com#04/20/2020#700#null#presg@email.com
+1#Emily Moye#etmoye@email.com#01/02/2020#800#null#emily@email.com
+6#Hope Conway#hope@email.com#04/01/2020#700#null#presg@email.com

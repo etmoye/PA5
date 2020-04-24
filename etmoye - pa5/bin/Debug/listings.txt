@@ -1,4 +1,4 @@
-1#3430 Napa Valley Way#April4#1000#April9#etmoye@email.com
-2#1234 Tennessee Rd#April5#500#April10#presley.gob@email.com
-3#5678 Georgia Street#June 1#200#June4#jack@email.com
-4#2468 Paul Bryant Drive#September 2#320#Septermber 4#hope@email.com
+1#3430 Napa Valley Way#04/10/2020#1000#emily@email.com
+2#123 Decatur Ave#05/01/2020#5000#emily@email.com
+3#2319 Cumberland Court#06/20/2020#800#presg@email.com
+4#1700 Paul Bryant Dr#05/11/2020#900#emily@email.com

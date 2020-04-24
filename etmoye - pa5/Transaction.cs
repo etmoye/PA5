@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace etmoye___pa5
 {
@@ -33,6 +34,16 @@ namespace etmoye___pa5
         {
 
         }
+
+        public Transaction(string tempID)
+        {
+            this.listingID = tempID;
+        }
+
+        //public static explicit operator Transaction(ListBox v)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public string GetlistingId()
         {
@@ -109,9 +120,13 @@ namespace etmoye___pa5
         //DO NOT KNOW IF I NEED THESE SINCE THEY ARE ALSO IN THE LISTINGS.CS CLASS
         public override string ToString()
         {
-            return this.listingID;
+            return this.renterName;
         }
 
+        public string ToFile()
+        {
+            return listingID + '#' + renterName + '#' + renterEmail + '#' + rentDate + '#' + rentAmount + '#' + checkoutDate + '#' + ownerEmail;
+        }
         public static int GetCount()
         {
             return count;
@@ -124,6 +139,12 @@ namespace etmoye___pa5
         {
             Transaction.count = count;
         }
-     
+
+        public string PrettyFormat()
+        { 
+            return "Listing ID: "  + listingID + "\nRenter: " + renterName + "\nRenter Email: " + renterEmail + "\nRent Date: " + rentDate + "\nRent Amount: " + rentAmount + "\nCheckout Date: " + checkoutDate + "\nOwner Email: " + ownerEmail + "\n";
+        }
+
+
     }
 }
